@@ -1,0 +1,29 @@
+#shell script to rename all ordinary files in a directory with filename.pid of shell
+if [ $# -ne 0 ]
+then
+echo "Syntax is <$0>"
+exit 1
+fi
+for i in * 
+do
+if [ -f $i ]
+then
+mv $i $i.$$ $newname
+fi
+done
+exit 
+ 
+ 
+ output
+ ksb@ksb-H410M-S2-V2:~/scripts$ sh ordinary.sh
+ksb@ksb-H410M-S2-V2:~/scripts$ ls -l
+total 36
+drwxrwxr-x 2 ksb ksb 4096 Jun 12 09:38 abc
+-rw-rw-r-- 1 ksb ksb  299 Apr 27 07:01 comparefile.sh.11750
+-rw-rw-r-- 1 ksb ksb  228 Jun 12 09:12 good.sh.11750
+-rw-rw-r-- 1 ksb ksb  426 Apr 27 07:22 leap.sh.11750
+-rw-rw-r-- 1 ksb ksb  208 Jun 12 10:01 ordinary.sh.11750
+-rw-rw-r-- 1 ksb ksb  426 Jun  5 09:07 prime2.sh.11750
+-rw-rw-r-- 1 ksb ksb  425 Apr 27 06:46 primenumber.sh.11750
+-rw-rw-r-- 1 ksb ksb  244 Apr 27 06:22 rename.sh.11824.11750
+-rw-rw-r-- 1 ksb ksb  432 Jun 12 09:02 triangle.sh.11750
