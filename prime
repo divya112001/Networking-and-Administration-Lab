@@ -1,0 +1,35 @@
+# to print prime numbers in a range
+if [ $# -ne 2 ]
+then
+echo "syntax is <$0> <no1> <no2>"
+exit 1
+fi
+n1=$1
+n2=$2
+if
+[ $n1 -gt $n2 ]
+then
+t=$n1
+n1=$n2
+n2=$t
+fi
+echo " prime numbers between $n1 and $n2 :"
+while [ $n1 -le $n2 ]
+do
+l=2
+while [ $l -le `expr $n1 / 2` ]
+do
+if [ `expr $n1 % $l` -eq 0 ]
+then
+break
+fi
+l=`expr $l + 1 `
+done
+if [ $l -gt `expr $n1 / 2` ]
+then
+echo -n "$n1,"
+fi
+n1=`expr $n1 + 1`
+done
+echo "\n"
+exit 0
