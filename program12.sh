@@ -13,4 +13,18 @@ shift
 done
 exit 0
 
+output
 
+ksb@ksb-H410M-S2-V2:~/scripts$ cat>ss1
+gyzgczcjzxhvcjzd
+^Z
+[1]+  Stopped                 cat > ss1
+ksb@ksb-H410M-S2-V2:~/scripts$ cat>ss2
+dhuhfkldnvlkzdngoisehfjbc cnvm,xnvkXBckuzsbc kz kxbv
+^Z
+[2]+  Stopped                 cat > ss2
+ksb@ksb-H410M-S2-V2:~/scripts$ sh program12.sh ss1 ss2
+ksb@ksb-H410M-S2-V2:~/scripts$ cat ss2
+gyzgczcjzxhvcjzd
+ksb@ksb-H410M-S2-V2:~/scripts$ cat ss1
+gyzgczcjzxhvcjzd
