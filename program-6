@@ -1,0 +1,40 @@
+
+# 6. Shell script to count the number of words and lines in a file
+
+if [ $# -ne 0 ]
+then
+echo "Syntax error"
+exit
+fi
+echo Enter file name
+read fname
+ter=`tty`
+exec < $fname
+i=0
+j=0
+while read line
+do 
+i=`expr $i + 1`
+for c in $line
+do
+j=`expr $j + 1`
+done
+done
+echo "No. of lines in $fname : $i"
+echo "No. of words in $fname : $j"
+exec < $ter
+
+********************************************************************************************************
+OUTPUT
+
+ksb@ksb-H410M-S2-V2:~/scripts$ sh program-6.sh ss2
+Syntax error
+ksb@ksb-H410M-S2-V2:~/scripts$ cat >we.txt
+hello guys how are you .......
+^Z
+[5]+  Stopped                 cat > we.txt
+ksb@ksb-H410M-S2-V2:~/scripts$ sh program-6.sh 
+Enter file name
+we.txt
+No. of lines in we.txt : 1
+No. of words in we.txt : 6
