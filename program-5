@@ -1,0 +1,44 @@
+
+# 5. Shell script to compare two files. If the files are identical delete one
+
+if [ $# -ne 0 ]
+then
+echo "Syntax error"
+exit
+fi
+echo "Enter a file name : "
+read a
+echo "Enter another file name : "
+read b
+cmp $a $b
+if [ $? -eq 0 ]
+then
+rm $b
+echo "Removed duplicate file"
+else
+echo "Duplicate file not exists"
+fi
+***************************************************************************************8
+
+OUTPUT
+
+
+Enter a file name : 
+ss1
+Enter another file name : 
+ss2
+cmp: ss1: No such file or directory
+Duplicate file not exists
+ksb@ksb-H410M-S2-V2:~/scripts$ cat>t1
+hi divya^Z
+[3]+  Stopped                 cat > t1
+ksb@ksb-H410M-S2-V2:~/scripts$ cat>t1
+hi divya
+^Z
+[4]+  Stopped                 cat > t1
+ksb@ksb-H410M-S2-V2:~/scripts$ sh program-5.sh
+Enter a file name : 
+t1
+Enter another file name : 
+t1
+Removed duplicate file
