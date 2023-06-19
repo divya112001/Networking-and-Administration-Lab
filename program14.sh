@@ -23,3 +23,16 @@ echo " file copied "
 
 
 
+OUTPUT
+
+
+sb@ksb-H410M-S2-V2:~/scripts$ sh program14.sh
+ 
+ syntax is <program14.sh> <srcfilename> <tgtfilename>
+ksb@ksb-H410M-S2-V2:~/scripts$ sh program14.sh ss2 ss1
+target file exists,over write it(y/n)
+n
+ksb@ksb-H410M-S2-V2:~/scripts$ cat ss2
+gyzgczcjzxhvcjzd
+
+
