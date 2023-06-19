@@ -1,40 +1,40 @@
 
 # 6. Shell script to count the number of words and lines in a file
 
-if [ $# -ne 0 ]
+if [ $# -gt 1 ]
 then
-echo "Syntax error"
-exit
+echo "Syntax is <$0> [<file name>]"
+exit 1
 fi
-echo Enter file name
-read fname
-ter=`tty`
-exec < $fname
-i=0
-j=0
+flag=0
+if [ $# -eq 1 ]
+then
+term=`tty`
+exec < $1
+flag=1
+fi
 while read line
-do 
-i=`expr $i + 1`
-for c in $line
 do
-j=`expr $j + 1`
+no1=`expr $no1 + 1`
+set $line >/dev/null
+nowds=`expr $nowds + $#`
 done
-done
-echo "No. of lines in $fname : $i"
-echo "No. of words in $fname : $j"
-exec < $ter
+echo "No. of lines = $no1"
+echo "No.of words = $nowds"
+if [ $flag -eq 1 ]
+then
+exec < $term
+fi
+exit 0
 
 ********************************************************************************************************
 OUTPUT
 
-ksb@ksb-H410M-S2-V2:~/scripts$ sh program-6.sh ss2
-Syntax error
-ksb@ksb-H410M-S2-V2:~/scripts$ cat >we.txt
-hello guys how are you .......
-^Z
-[5]+  Stopped                 cat > we.txt
-ksb@ksb-H410M-S2-V2:~/scripts$ sh program-6.sh 
-Enter file name
-we.txt
-No. of lines in we.txt : 1
-No. of words in we.txt : 6
+ksb@ksb-H410M-S2-V2:~/scripts$ cat xyz.txt
+hello gud morning divya ,have a nice day
+ksb@ksb-H410M-S2-V2:~/scripts$ sh program-6.sh xyz.txt
+No. of lines = 1
+No.of words = 8
+ksb@ksb-H410M-S2-V2:~/scripts$ cat xyz.txt
+hello gud morning divya ,have a nice day
+
