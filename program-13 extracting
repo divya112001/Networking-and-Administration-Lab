@@ -41,25 +41,21 @@ shift
 done
 exit 0
 
-ksb@ksb-H410M-S2-V2:~/scripts$ vi extracting.sh
-ksb@ksb-H410M-S2-V2:~/scripts$ sh  extracting.sh 5 10 extracting.sh
+lines from 5 to 10 from file extracting.sh
+
 exit 1
 fi
 n1=$1
 n2=$2
 shift
 shift
-ksb@ksb-H410M-S2-V2:~/scripts$ sh  extracting.sh 5 10 extracting.sh program-6.sh
-exit 1
-fi
-n1=$1
-n2=$2
-shift
-shift
+ lines from 5 to 10 from file program-6.sh
+
 exit 1
 fi
 flag=0
 if [ $# -eq 1 ]
 then
 term=`tty` 
+
 
