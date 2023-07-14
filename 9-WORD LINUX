@@ -21,3 +21,22 @@ done
 mv file1 $file
 rm file2
 exec < $term
+
+OUTPUT
+
+ksb@ksb-H410M-S2-V2:~/scripts$ cat >f1
+o
+os
+linux
+windows
+mac
+^Z
+[7]+  Stopped                 cat > f1
+ksb@ksb-H410M-S2-V2:~/scripts$ sh program9.sh 
+Enter the file name: 
+f1 
+ksb@ksb-H410M-S2-V2:~/scripts$ cat f1
+o
+os
+windows
+mac
