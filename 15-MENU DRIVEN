@@ -102,3 +102,172 @@ esac
 echo "Enter to continue......."
 read x
 done
+
+
+
+OUTPUT
+
+1.all ordinary files
+2.all directory files
+
+3.all special files
+4.all files readable to ugo
+
+5all files writeable to ugo
+6.all files executable to ugo
+
+7.all rwx files
+8.exit
+
+option :
+1
+f2
+program15.sh
+rrt
+t6
+Enter to continue.......
+
+1.all ordinary files
+2.all directory files
+
+3.all special files
+4.all files readable to ugo
+
+5all files writeable to ugo
+6.all files executable to ugo
+
+7.all rwx files
+8.exit
+
+option :
+2
+kk
+rr
+Enter to continue.......
+
+
+1.all ordinary files
+2.all directory files
+
+3.all special files
+4.all files readable to ugo
+
+5all files writeable to ugo
+6.all files executable to ugo
+
+7.all rwx files
+8.exit
+
+option :
+3
+Enter to continue.......
+
+1.all ordinary files
+2.all directory files
+
+3.all special files
+4.all files readable to ugo
+
+5all files writeable to ugo
+6.all files executable to ugo
+
+7.all rwx files
+8.exit
+
+option :
+4
+f2
+program15.sh
+rrt
+t6
+Enter to continue.......
+
+1.all ordinary files
+2.all directory files
+
+3.all special files
+4.all files readable to ugo
+
+5all files writeable to ugo
+6.all files executable to ugo
+
+7.all rwx files
+8.exit
+
+option :
+5
+f2
+program15.sh
+rrt
+t6
+Enter to continue.......
+
+1.all ordinary files
+2.all directory files
+
+3.all special files
+4.all files readable to ugo
+
+5all files writeable to ugo
+6.all files executable to ugo
+
+7.all rwx files
+8.exit
+
+option :
+6
+f2
+program15.sh
+rrt
+t6
+Enter to continue.......
+
+1.all ordinary files
+2.all directory files
+
+3.all special files
+4.all files readable to ugo
+
+5all files writeable to ugo
+6.all files executable to ugo
+
+7.all rwx files
+8.exit
+
+option :
+7
+f2
+program15.sh
+rrt
+t6
+Enter to continue.......
+
+
+1.all ordinary files
+2.all directory files
+
+3.all special files
+4.all files readable to ugo
+
+5all files writeable to ugo
+6.all files executable to ugo
+
+7.all rwx files
+8.exit
+
+option :
+8
+ksb@ksb-H410M-S2-V2:~/scripts/xy$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
